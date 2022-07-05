@@ -6,79 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RocketCard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!--<form>
+    <form>
         <fieldset>
             <label for="userName" class="hide">
                 digite o usuario do github:
             </label>
-            <input type="text" name="userName" id="name">
-            <button>criar card</button>
+            <input type="text" name="userName" id="name" placeholder="user">
+            <button onclick="start()">criar card</button>
+            <input type="text" required hidden>
         </fieldset>
-    </form>-->
+    </form>
 
     <main>
         <section id="cardSide">
             <h2>compartilhe seu #rocketcard</h2>
-            <div id="backgroundCard">
-                <div id="card">
-                    <div id="headerCard">
-                        <img src="./assets/logo.svg" alt="logo da rocketseat">
-                        <h3>nome do usuario</h3>
-                    </div>
-                    <img id="imageProfile" alt="imagem do usuario">
-                    <div id="infoCard">
-                        <ul>
-                            <li>
-                                <div id="followers">
+            <a id="github" target="_blank">
+                <div id="backgroundCard">
+                    <div id="card">
+                        <div id="headerCard">
+                            <div class="imgBorder">
+                                <img src="./assets/logo.svg" alt="logo da rocketseat">
+                            </div>
+                            <h3 id="nameUser">nome do usuario</h3>
+                        </div>
+                        <img id="imageProfile" alt="imagem do usuario">
+                        <div id="infoCard">
+                            <ul>
+                                <li>
                                     <img src="./assets/followers.svg" alt="seguidores">
-                                    <p> seguidores</p>
-                                </div>
-                            </li>
+                                    <p id="followers"> seguidores</p>
+                                </li>
 
-                            <li>
-                                <div id="following">
+                                <li>
                                     <img src="./assets/following.svg" alt="seguindo">
-                                    <p> seguindo</p>
-                                </div>
-                            </li>
+                                    <p id="following"> seguindo</p>
+                                </li>
 
-                            <li>
-                                <div id="repository">
+                                <li>
                                     <img src="./assets/repository.svg" alt="quantidade de repositorios">
-                                    <p> repositorios</p>
-                                </div>
-                            </li>
+                                    <p id="repository"> repositorios</p>
+                                </li>
 
-                            <li>
-                                <div id="company">
+                                <li>
                                     <img src="./assets/company.svg" alt="compania">
-                                    <p></p>
-                            </li>
+                                    <p id="company"></p>
+                                </li>
 
-                            <li>
-                                <div id="location">
+                                <li>
                                     <img src="./assets/location.svg" alt="localização">
-                                    <p> </p>
-                                </div>
-                            </li>
-                        </ul>
+                                    <p id="location"> </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="footerCard">
+                            <img src="./assets/logo.svg" alt="logo da rocketseat">
+                            ROCKETCARD
+                        </div>
                     </div>
                 </div>
-                <div id="footerCard">
-                    <img src="./assets/logo.svg" alt="logo da rocketseat">
-                    ROCKETCARD
-                </div>
-            </div>
-            </div>
+            </a>
         </section>
         <section id="controlBackground">
             <h2>Customizar RocketCard</h2>
-            <button>gerar background</button>
+            <button onclick="alterBackgroundColor()">gerar background</button>
         </section>
     </main>
 </body>
+
+<script src="./logic.js"></script>
 
 </html>

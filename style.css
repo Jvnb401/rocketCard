@@ -13,12 +13,12 @@
     text-decoration: none;
     box-sizing: border-box;
     color: var(--text);
-    background-color: var(--bg-card);
 }
 
 body {
     width: 100vw;
     font-family: 'Prompt', sans-serif;
+    background-color: var(--bg-card);
 }
 
 main {
@@ -26,6 +26,125 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    font-weight: 700;
+}
+
+form {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000f;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+fieldset {
+    display: grid;
+    height: 150px;
+    width: 250px;
+    align-content: space-evenly;
+    justify-items: center;
+    background-color: var(--bg-card);
+    border-radius: 28px;
+}
+
+input,
+button {
+    background-color: var(--border-button);
+    border: 1px solid var(--bg-card);
+    font-weight: 400;
+}
+
+input:valid,
+input:focus,
+input {
+    height: 40px;
+    padding: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+#cardSide {
+    display: grid;
+    justify-items: center;
+}
+
+#backgroundCard {
+    height: 600px;
+    width: 400px;
+    border-radius: 60px;
+    background-color: var(--bg);
+    padding: 5%;
+}
+
+#card {
+    background-color: var(--bg-card);
+    height: 100%;
+    border-radius: 60px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+#headerCard {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.imgBorder {
+    padding: 6px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    border: 1px solid var(--buttons);
+    border-radius: 50%;
+    justify-content: center;
+}
+
+#imageProfile {
+    position: absolute;
+    top: 20%;
+    left: 70px;
+    height: 60%;
+    border: 10px solid var(--img-profile);
+    border-radius: 50%;
+}
+
+#infoCard {
+    position: absolute;
+    top: 285px;
+    background-image: linear-gradient(#000, #464545c4, #3e383880);
+    border-radius: 15px;
+    height: 180px;
+    width: 55%;
+    padding: 15px;
+}
+
+#infoCard ul {
+    list-style: none;
+}
+
+#infoCard ul li {
+    margin: 5px;
+    font-weight: 100;
+}
+
+#infoCard ul li * {
+    display: inline-block;
+}
+
+#footerCard {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 135%;
 }
 
 #controlBackground {
@@ -36,7 +155,7 @@ main {
 }
 
 #controlBackground h2 {
-    font-size: 400;
+    font-weight: 400;
 }
 
 #controlBackground button {
