@@ -1,0 +1,53 @@
+:root {
+    --bg: #000000;
+    --bg-card: #0E1218;
+    --text: #F1F1F1;
+    --img-profile: #8257e5;
+    --buttons: #FFF;
+    --border-button: #1A1A1A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: var(--text);
+    background-color: var(--bg-card);
+}
+
+body {
+    width: 100vw;
+    font-family: 'Prompt', sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#controlBackground {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 110px;
+}
+
+#controlBackground h2 {
+    font-size: 400;
+}
+
+#controlBackground button {
+    border: 1px solid var(--border-button);
+    background-color: var(--bg);
+    height: 60px;
+    color: var(--buttons);
+    border-radius: 15px;
+    transition: .25s;
+}
+
+#controlBackground button:hover {
+    transform: translateY(-2px);
+}
