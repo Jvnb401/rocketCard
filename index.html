@@ -76,10 +76,26 @@
         <section id="controlBackground">
             <h2>Customizar RocketCard</h2>
             <button onclick="alterBackgroundColor()">gerar background</button>
+            <button onclick="dowloadCard()">baixar imagem</button>
         </section>
     </main>
 </body>
 
 <script src="./logic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script>
+    function dowloadCard() {
+        const user = document.getElementById('nameUser').innerHTML;
+        var card = document.getElementById('github');
+
+        domtoimage.toPng(card, { quality: 0.95 })
+            .then(function (dataUrl) {
+                var link = document.createElement('a');
+                link.download = `${user}-card.png`;
+                link.href = dataUrl;
+                link.click();
+            });
+    };
+</script>
 
 </html>
