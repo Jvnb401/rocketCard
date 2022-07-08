@@ -77,6 +77,7 @@
             <h2>Customizar RocketCard</h2>
             <button onclick="alterBackgroundColor()">gerar background</button>
             <button onclick="dowloadCard()">baixar imagem</button>
+            <button onclick="copyCard()">copiar imagem</button>
         </section>
     </main>
 </body>
@@ -96,6 +97,16 @@
                 link.click();
             });
     };
+
+    function copyCard() {
+        const imagem = document.getElementById('github');
+
+        domtoimage.toBlob(imagem)
+            .then(function (blob) {
+                const clipItem = [new ClipboardItem({ [blob.type]: blob })];
+                navigator.clipboard.write(clipItem).then();
+            });
+    }
 </script>
 
 </html>

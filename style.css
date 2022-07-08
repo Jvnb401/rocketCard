@@ -151,7 +151,6 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 110px;
 }
 
 #controlBackground h2 {
