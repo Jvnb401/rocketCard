@@ -3,8 +3,13 @@ const colors = ['#000', '#00a', '#0a0', '#a00', '#aa0', '#a0a', '#0aa', '#aaa', 
 let index = 0;
 
 function alterBackgroundColor() {
-    index += index < colors.length - 1 ? 1 : 1 - colors.length;
-    backgroundCard.style.backgroundColor = colors[index];
+    index += index <= colors.length - 1 ? 1 : - colors.length;
+    if (index == colors.length)
+        backgroundCard.classList.add("rainbow");
+    else {
+        backgroundCard.classList.remove("rainbow");
+        backgroundCard.style.backgroundColor = colors[index];
+    }
 }
 
 function start() {
