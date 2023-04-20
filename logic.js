@@ -21,6 +21,9 @@ function start() {
         .then(data => {
             if (data.message == "Not Found")
                 throw "não achei"
+            
+            document.getElementsByTagName('main')[0].classList.remove('hide');
+            
             document.getElementById('github').href = data.html_url
             document.getElementById('nameUser').innerHTML = data.login != null ? data.login : "???";
             document.getElementById('imageProfile').src = data.avatar_url;
